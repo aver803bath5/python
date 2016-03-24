@@ -19,6 +19,9 @@ while x!=y:
 		big=x
 		print "Now range is %d to %d" %(little,big)
 		x=input("Enter the number you guess(0~99):")
+		while x>big or x<little:
+			print "Out of range!!!"
+			x=input("Enter the number you guess(0~99):")
 		int(x)
 		guess+=1
 	elif x<y:
@@ -26,6 +29,9 @@ while x!=y:
 		little=x
 		print "Now range is %d to %d" %(little,big)
 		x=input("Enter the number you guess(0~99):")
+		while x>big or x<little:
+			print "Out of range!!!"
+			x=input("Enter the number you guess(0~99):")
 		int(x)
 		guess+=1
 print "Congratuation!!! The answer is %d, you guess %d times" %(y,guess)
